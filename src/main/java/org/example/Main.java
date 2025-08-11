@@ -2,6 +2,7 @@ package org.example;
 
 import config.FactoryConfiguration;
 import entity.Customer;
+import entity.FullName;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -13,11 +14,23 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Customer customer = new Customer();
+        customer.setName("Saumya");
+
+        FullName fullName = new FullName();
+        fullName.setFirstName("Divyanjalee");
+        fullName.setLastName("Hello");
+
+        customer.setFullName(fullName);
+
+        Transaction transaction = session.beginTransaction();
 //        saveCustomer();
 //        getCustomer();
 //        mergeCustomer();
 //        deleteCustomer();
-          getAllCustomers();
+//          getAllCustomers();
 
     }
 

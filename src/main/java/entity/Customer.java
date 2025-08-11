@@ -21,6 +21,21 @@ public class Customer {
     private int id;
     private String name;
 
+    // ekma coloum eka part dekkt penn one , first name , last name wge
+    //create krgnn thawa class ekk - data save krt passe wena wenm table blnn puluwn wenn one
+    @Embedded
+    private FullName fullName;
+
+
+
+ @Transient
+ private  String debitCardNumber;
+ // non -persistent - save krgnne nathuwa coloumn hadnwa, clientge card details wge(good developerslt ewa tiygnn ba e nisa eka use krnn)
+
+
+    @Lob //text,binary data(image ekk gnn nm eka binary data walt convert krgnnwa) - large data save krgnn puluwn -
+   // Binary data - BASE64(image like any file can save on db)
+    private String address;
 
     public Customer(){}
 
@@ -54,4 +69,6 @@ public class Customer {
     }
 
 
+    public void setFullName(FullName fullName) {
+    }
 }
