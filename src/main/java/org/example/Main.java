@@ -27,7 +27,7 @@ public class Main {
         Transaction transaction = session.beginTransaction();
         session.remove(customer);
        // session.delete(customer);
-        transaction.commit();
+        transaction.commit();// transaction - interface ekk - reference object ekk hadagnnwa, transactions one me dewl manage krgnn
     }
 
     private static void mergeCustomer() {

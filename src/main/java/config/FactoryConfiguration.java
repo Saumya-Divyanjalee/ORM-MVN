@@ -13,7 +13,7 @@ public class FactoryConfiguration {
 
     private FactoryConfiguration() throws HibernateException {
         //xml file read krnn sessionfactory configurations blnwa,because eya thama database ekth ekk interact wenne
-
+// important
         Configuration configuration = new Configuration().configure();
         configuration.addAnnotatedClass(Customer.class);//customer class eka add kra,tiyena class okk me widiyt add krnn
         //thawa class tiyenm me widiyta link krnn

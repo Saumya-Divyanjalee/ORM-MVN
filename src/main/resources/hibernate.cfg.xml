@@ -8,11 +8,14 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_db1?createDatabaseIfNotExist=true</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
+
+
+    <!--database eka change krgnn puluwn , independant(Mysql,MongoDB wge,methnin thama handle krnne)-->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
 
-
+<!--xml wenuwt property file use krnn puluwan, self studying property files-->
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
   </session-factory>
